@@ -1,3 +1,4 @@
 github "Alamofire/Alamofire" "4.3.0"
+github "utahiosmac/Marshal" "1.2.4"
 github "antitypical/Result" "3.1.0"
 github "WebAPIKit/WebAPIKit" "31d4774fc007a74bc767354006314c6806628e09"

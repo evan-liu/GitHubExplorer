@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  GitHubExplorer
-//
-//  Created by Evan Liu on 19/02/17.
-//  Copyright © 2017 EvanCoding. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

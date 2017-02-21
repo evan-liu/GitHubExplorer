@@ -10,6 +10,9 @@
 		2010CF471E5C34EC00986663 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010CF441E5C34EC00986663 /* Alamofire.framework */; };
 		2010CF481E5C34EC00986663 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010CF451E5C34EC00986663 /* Result.framework */; };
 		2010CF491E5C34EC00986663 /* WebAPIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010CF461E5C34EC00986663 /* WebAPIKit.framework */; };
+		2010CF4C1E5C358900986663 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2010CF4B1E5C358900986663 /* API.swift */; };
+		2010CF4E1E5C375900986663 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2010CF4D1E5C375900986663 /* User.swift */; };
+		2010CF501E5C432400986663 /* Marshal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010CF4F1E5C432400986663 /* Marshal.framework */; };
 		205AED4F1E59879700378E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AED4E1E59879700378E12 /* AppDelegate.swift */; };
 		205AED511E59879700378E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AED501E59879700378E12 /* ViewController.swift */; };
 		205AED541E59879700378E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AED521E59879700378E12 /* Main.storyboard */; };
@@ -32,6 +35,9 @@
 		2010CF441E5C34EC00986663 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2010CF451E5C34EC00986663 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		2010CF461E5C34EC00986663 /* WebAPIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebAPIKit.framework; path = Carthage/Build/iOS/WebAPIKit.framework; sourceTree = "<group>"; };
+		2010CF4B1E5C358900986663 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2010CF4D1E5C375900986663 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2010CF4F1E5C432400986663 /* Marshal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Marshal.framework; path = Carthage/Build/iOS/Marshal.framework; sourceTree = "<group>"; };
 		205AED4B1E59879700378E12 /* GitHubExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205AED4E1E59879700378E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		205AED501E59879700378E12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +58,7 @@
 				2010CF471E5C34EC00986663 /* Alamofire.framework in Frameworks */,
 				2010CF481E5C34EC00986663 /* Result.framework in Frameworks */,
 				2010CF491E5C34EC00986663 /* WebAPIKit.framework in Frameworks */,
+				2010CF501E5C432400986663 /* Marshal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,11 +75,21 @@
 		2010CF431E5C34EC00986663 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2010CF4F1E5C432400986663 /* Marshal.framework */,
 				2010CF441E5C34EC00986663 /* Alamofire.framework */,
 				2010CF451E5C34EC00986663 /* Result.framework */,
 				2010CF461E5C34EC00986663 /* WebAPIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2010CF4A1E5C356300986663 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				2010CF4B1E5C358900986663 /* API.swift */,
+				2010CF4D1E5C375900986663 /* User.swift */,
+			);
+			path = GitHub;
 			sourceTree = "<group>";
 		};
 		205AED421E59879700378E12 = {
@@ -97,6 +114,7 @@
 		205AED4D1E59879700378E12 /* GitHubExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				2010CF4A1E5C356300986663 /* GitHub */,
 				205AED4E1E59879700378E12 /* AppDelegate.swift */,
 				205AED501E59879700378E12 /* ViewController.swift */,
 				205AED521E59879700378E12 /* Main.storyboard */,
@@ -126,6 +144,7 @@
 				205AED471E59879700378E12 /* Sources */,
 				205AED481E59879700378E12 /* Frameworks */,
 				205AED491E59879700378E12 /* Resources */,
+				2010CF511E5C44C200986663 /* copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,11 +233,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2010CF511E5C44C200986663 /* copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Marshal.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WebAPIKit.framework",
+			);
+			name = "copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		205AED471E59879700378E12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2010CF4C1E5C358900986663 /* API.swift in Sources */,
+				2010CF4E1E5C375900986663 /* User.swift in Sources */,
 				205AED511E59879700378E12 /* ViewController.swift in Sources */,
 				205AED4F1E59879700378E12 /* AppDelegate.swift in Sources */,
 			);
