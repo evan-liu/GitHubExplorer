@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2010CF471E5C34EC00986663 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010CF441E5C34EC00986663 /* Alamofire.framework */; };
+		2010CF481E5C34EC00986663 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010CF451E5C34EC00986663 /* Result.framework */; };
+		2010CF491E5C34EC00986663 /* WebAPIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010CF461E5C34EC00986663 /* WebAPIKit.framework */; };
 		205AED4F1E59879700378E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AED4E1E59879700378E12 /* AppDelegate.swift */; };
 		205AED511E59879700378E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AED501E59879700378E12 /* ViewController.swift */; };
 		205AED541E59879700378E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AED521E59879700378E12 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2010CF441E5C34EC00986663 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		2010CF451E5C34EC00986663 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		2010CF461E5C34EC00986663 /* WebAPIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebAPIKit.framework; path = Carthage/Build/iOS/WebAPIKit.framework; sourceTree = "<group>"; };
 		205AED4B1E59879700378E12 /* GitHubExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205AED4E1E59879700378E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		205AED501E59879700378E12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2010CF471E5C34EC00986663 /* Alamofire.framework in Frameworks */,
+				2010CF481E5C34EC00986663 /* Result.framework in Frameworks */,
+				2010CF491E5C34EC00986663 /* WebAPIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2010CF431E5C34EC00986663 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2010CF441E5C34EC00986663 /* Alamofire.framework */,
+				2010CF451E5C34EC00986663 /* Result.framework */,
+				2010CF461E5C34EC00986663 /* WebAPIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		205AED421E59879700378E12 = {
 			isa = PBXGroup;
 			children = (
 				205AED4D1E59879700378E12 /* GitHubExplorer */,
 				205AED621E59879700378E12 /* GitHubExplorerTests */,
 				205AED4C1E59879700378E12 /* Products */,
+				2010CF431E5C34EC00986663 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -337,6 +357,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHubExplorer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.evancoding.GitHubExplorer;
@@ -349,6 +373,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHubExplorer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.evancoding.GitHubExplorer;
@@ -404,6 +432,7 @@
 				205AED6A1E59879700378E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		205AED6B1E59879700378E12 /* Build configuration list for PBXNativeTarget "GitHubExplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +441,7 @@
 				205AED6D1E59879700378E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
