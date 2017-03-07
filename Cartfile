@@ -1,2 +1,5 @@
 github "WebAPIKit/WebAPIKit" "master"
-github "utahiosmac/Marshal"
+github "evan-liu/FormationLayout" ~> 0.8.5
+
+github "utahiosmac/Marshal" ~> 1.2.4
+github "Swinject/Swinject" ~> 2.0.0
