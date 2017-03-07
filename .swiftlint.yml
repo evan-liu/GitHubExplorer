@@ -1,0 +1,19 @@
+disabled_rules: 
+  - trailing_whitespace
+
+included: 
+  - GitHubExplorer
+  - GitHubExplorerTests
+
+excluded: 
+  - Assets.xcassets
+  - GitHubExplorer/Base.lproj
+
+type_name:
+  excluded: 
+    - UI
+
+variable_name:
+  excluded:
+    - ui 
+    - id
