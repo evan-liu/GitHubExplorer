@@ -22,8 +22,12 @@
 		206C732B1E6F622800279E1E /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206C73291E6F622800279E1E /* Swinject.framework */; };
 		206C732F1E6FB12900279E1E /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C732E1E6FB12900279E1E /* ServiceLocator.swift */; };
 		206C73311E6FB17A00279E1E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C73301E6FB17A00279E1E /* Router.swift */; };
-		206C73341E6FB20800279E1E /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C73331E6FB20800279E1E /* UI.swift */; };
-		206C73361E6FB29100279E1E /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C73351E6FB29100279E1E /* Demo.swift */; };
+		2077D97F1E70D2B500B52F13 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077D97E1E70D2B500B52F13 /* Assets.swift */; };
+		2077D9811E710E0000B52F13 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077D9801E710E0000B52F13 /* Style.swift */; };
+		20FBC23E1E70005C006840F1 /* UsersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBC23D1E70005C006840F1 /* UsersController.swift */; };
+		20FBC2401E70008D006840F1 /* RepositoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBC23F1E70008D006840F1 /* RepositoriesController.swift */; };
+		20FBC2421E700128006840F1 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBC2411E700128006840F1 /* Demo.swift */; };
+		20FBC2441E70012F006840F1 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBC2431E70012F006840F1 /* UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +61,12 @@
 		206C73291E6F622800279E1E /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		206C732E1E6FB12900279E1E /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceLocator.swift; path = GitHubExplorer/ServiceLocator.swift; sourceTree = "<group>"; };
 		206C73301E6FB17A00279E1E /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = GitHubExplorer/Router.swift; sourceTree = "<group>"; };
-		206C73331E6FB20800279E1E /* UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
-		206C73351E6FB29100279E1E /* Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
+		2077D97E1E70D2B500B52F13 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assets.swift; path = GitHubExplorer/Assets.swift; sourceTree = "<group>"; };
+		2077D9801E710E0000B52F13 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		20FBC23D1E70005C006840F1 /* UsersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersController.swift; path = GitHubExplorer/UsersController.swift; sourceTree = "<group>"; };
+		20FBC23F1E70008D006840F1 /* RepositoriesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoriesController.swift; path = GitHubExplorer/RepositoriesController.swift; sourceTree = "<group>"; };
+		20FBC2411E700128006840F1 /* Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Demo.swift; path = GitHubExplorer/Demo.swift; sourceTree = "<group>"; };
+		20FBC2431E70012F006840F1 /* UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UI.swift; path = GitHubExplorer/UI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +177,12 @@
 			children = (
 				205AED4E1E59879700378E12 /* AppDelegate.swift */,
 				205AED501E59879700378E12 /* RootController.swift */,
-				206C732C1E6FB0E200279E1E /* Core */,
-				206C73321E6FB1F400279E1E /* UI */,
 				2010CF4A1E5C356300986663 /* GitHub */,
+				206C732C1E6FB0E200279E1E /* Core */,
+				2077D97D1E70C9CB00B52F13 /* Assets */,
+				206C73321E6FB1F400279E1E /* UI */,
+				20FBC23B1E6FFC69006840F1 /* Users */,
+				20FBC23C1E6FFC74006840F1 /* Repositories */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -181,7 +192,7 @@
 			children = (
 				206C732E1E6FB12900279E1E /* ServiceLocator.swift */,
 				206C73301E6FB17A00279E1E /* Router.swift */,
-				206C73351E6FB29100279E1E /* Demo.swift */,
+				20FBC2411E700128006840F1 /* Demo.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -189,9 +200,34 @@
 		206C73321E6FB1F400279E1E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				206C73331E6FB20800279E1E /* UI.swift */,
+				2077D9801E710E0000B52F13 /* Style.swift */,
+				20FBC2431E70012F006840F1 /* UI.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		2077D97D1E70C9CB00B52F13 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2077D97E1E70D2B500B52F13 /* Assets.swift */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		20FBC23B1E6FFC69006840F1 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				20FBC23D1E70005C006840F1 /* UsersController.swift */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		20FBC23C1E6FFC74006840F1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				20FBC23F1E70008D006840F1 /* RepositoriesController.swift */,
+			);
+			name = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,13 +373,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2010CF4C1E5C358900986663 /* API.swift in Sources */,
-				206C73341E6FB20800279E1E /* UI.swift in Sources */,
-				206C73361E6FB29100279E1E /* Demo.swift in Sources */,
+				2077D97F1E70D2B500B52F13 /* Assets.swift in Sources */,
 				206C732F1E6FB12900279E1E /* ServiceLocator.swift in Sources */,
+				20FBC2421E700128006840F1 /* Demo.swift in Sources */,
+				20FBC2441E70012F006840F1 /* UI.swift in Sources */,
 				2010CF4E1E5C375900986663 /* User.swift in Sources */,
 				205AED511E59879700378E12 /* RootController.swift in Sources */,
+				2077D9811E710E0000B52F13 /* Style.swift in Sources */,
 				206C73311E6FB17A00279E1E /* Router.swift in Sources */,
+				20FBC2401E70008D006840F1 /* RepositoriesController.swift in Sources */,
 				205AED4F1E59879700378E12 /* AppDelegate.swift in Sources */,
+				20FBC23E1E70005C006840F1 /* UsersController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

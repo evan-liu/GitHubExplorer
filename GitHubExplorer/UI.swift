@@ -11,7 +11,7 @@ class UI {
     init(controller: UIViewController) {
         self.controller = controller
 
-        view.backgroundColor = .white
+        view.backgroundColor = .sceneBackground
         build()
     }
 
