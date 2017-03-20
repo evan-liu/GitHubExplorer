@@ -18,6 +18,8 @@
 		205AED541E59879700378E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AED521E59879700378E12 /* Main.storyboard */; };
 		205AED561E59879700378E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205AED551E59879700378E12 /* Assets.xcassets */; };
 		205AED591E59879700378E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AED571E59879700378E12 /* LaunchScreen.storyboard */; };
+		206978B21E7FC9F0000A7EF6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 206978B01E7FC9F0000A7EF6 /* Localizable.strings */; };
+		206978B41E7FCCCF000A7EF6 /* Localize_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206978B31E7FCCCF000A7EF6 /* Localize_Swift.framework */; };
 		206C732A1E6F622800279E1E /* FormationLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206C73281E6F622800279E1E /* FormationLayout.framework */; };
 		206C732B1E6F622800279E1E /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206C73291E6F622800279E1E /* Swinject.framework */; };
 		206C732F1E6FB12900279E1E /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C732E1E6FB12900279E1E /* ServiceLocator.swift */; };
@@ -56,6 +58,8 @@
 		205AED5A1E59879700378E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = GitHubExplorer/Info.plist; sourceTree = "<group>"; };
 		205AED5F1E59879700378E12 /* GitHubExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		205AED651E59879700378E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = GitHubExplorerTests/Info.plist; sourceTree = "<group>"; };
+		206978B11E7FC9F0000A7EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = GitHubExplorer/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		206978B31E7FCCCF000A7EF6 /* Localize_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localize_Swift.framework; path = Carthage/Build/iOS/Localize_Swift.framework; sourceTree = "<group>"; };
 		206C73231E6F589200279E1E /* Demo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Demo.xcconfig; path = GitHubExplorer/Demo.xcconfig; sourceTree = "<group>"; };
 		206C73281E6F622800279E1E /* FormationLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FormationLayout.framework; path = Carthage/Build/iOS/FormationLayout.framework; sourceTree = "<group>"; };
 		206C73291E6F622800279E1E /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				2010CF501E5C432400986663 /* Marshal.framework in Frameworks */,
 				206C732A1E6F622800279E1E /* FormationLayout.framework in Frameworks */,
 				206C732B1E6F622800279E1E /* Swinject.framework in Frameworks */,
+				206978B41E7FCCCF000A7EF6 /* Localize_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +101,7 @@
 		2010CF431E5C34EC00986663 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				206978B31E7FCCCF000A7EF6 /* Localize_Swift.framework */,
 				206C73281E6F622800279E1E /* FormationLayout.framework */,
 				206C73291E6F622800279E1E /* Swinject.framework */,
 				2010CF4F1E5C432400986663 /* Marshal.framework */,
@@ -165,6 +171,7 @@
 		206C73211E6F50F000279E1E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				206978B01E7FC9F0000A7EF6 /* Localizable.strings */,
 				205AED551E59879700378E12 /* Assets.xcassets */,
 				205AED521E59879700378E12 /* Main.storyboard */,
 				205AED571E59879700378E12 /* LaunchScreen.storyboard */,
@@ -316,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				205AED591E59879700378E12 /* LaunchScreen.storyboard in Resources */,
+				206978B21E7FC9F0000A7EF6 /* Localizable.strings in Resources */,
 				205AED561E59879700378E12 /* Assets.xcassets in Resources */,
 				205AED541E59879700378E12 /* Main.storyboard in Resources */,
 			);
@@ -343,6 +351,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/WebAPIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/FormationLayout.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Localize_Swift.framework",
 			);
 			name = "copy-frameworks";
 			outputPaths = (
@@ -421,6 +430,14 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = GitHubExplorer;
+			sourceTree = "<group>";
+		};
+		206978B01E7FC9F0000A7EF6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				206978B11E7FC9F0000A7EF6 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,4 +1,5 @@
 import UIKit
+import Localize_Swift
 
 final class Router {
 
@@ -13,20 +14,26 @@ final class Router {
 }
 
 extension Tab {
-    static let users = Tab(title: "Users", icon: .usersTabIcon, controller: UsersController())
-    static let repositories = Tab(title: "Repositories", icon: .reposTabIcon, controller: UsersController())
+    static let users = Tab(name: "users", controller: UsersController())
+    static let repositories = Tab(name: "repositories", controller: UsersController())
 }
 
 struct Tab {
 
+    let name: String
+    let title: String
+
     fileprivate var naviController: UINavigationController
-    fileprivate var rootController: UIViewController
-    fileprivate init(title: String, icon: UIImage, controller: UIViewController) {
-        rootController = controller
-        naviController = UINavigationController(rootViewController: rootController)
-        Style.setupNaviBar(naviController.navigationBar)
+    fileprivate init(name: String, controller: UIViewController) {
+        self.name = name
+        title = "tab.\(name).title".localized()
+
+        controller.title = title
+
+        naviController = UINavigationController(rootViewController: controller)
         naviController.tabBarItem.title = title
-        naviController.tabBarItem.image = icon
+        naviController.tabBarItem.image = UIImage(named: "\(name)TabIcon")
+        Style.setupNaviBar(naviController.navigationBar)
     }
 
 }
